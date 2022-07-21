@@ -170,8 +170,8 @@ https://docs.docker.com/engine/userguide/
   0e7ef0959d21        busybox            "/bin/sh"            5 seconds ago         Exited (0) 27 minutes ago loving_jennings 0B (virtual 1.85kB)
   ```
 
-  - También podemos usar la opción -f para filtrar por algún dato concreto,
-    por ejemplo, por el nombre. Busca por el contenido dentro del texto.
+- También podemos usar la opción -f para filtrar por algún dato concreto,
+  por ejemplo, por el nombre. Busca por el contenido dentro del texto.
 
 - Ejemplo. Teniendo estos contenedores:
 
@@ -183,7 +183,7 @@ https://docs.docker.com/engine/userguide/
   0e7ef0959d21        busybox            "/bin/sh"            5 seconds ago         Exited (0) 27 minutes ago loving_jennings
   ```
 
-  - Si queremos saber los que tienen la palabra “nifty_vaughan” en el nombre:
+- Si queremos saber los que tienen la palabra “nifty_vaughan” en el nombre:
 
   ```
   docker ps -a -s -f "davinci"
@@ -191,7 +191,7 @@ https://docs.docker.com/engine/userguide/
   c0b8f9f8f8f8        hello-world        "/hello"            5 seconds ago         Exited (0) 32 minutes ago nifty_vaughan 0B (virtual 1.15MB)
   ```
 
-  - O los que tengan una “y” en el nombre:
+- O los que tengan una “y” en el nombre:
 
   ```
   docker ps -a -f name=y
