@@ -187,6 +187,7 @@ https://docs.docker.com/engine/userguide/
 
   ```
   docker ps -a -s -f "davinci"
+
   CONTAINER ID        IMAGE               COMMAND             CREATED             STATUS              PORTS               NAMES
   c0b8f9f8f8f8        hello-world        "/hello"            5 seconds ago         Exited (0) 32 minutes ago nifty_vaughan 0B (virtual 1.15MB)
   ```
@@ -195,6 +196,7 @@ https://docs.docker.com/engine/userguide/
 
   ```
   docker ps -a -f name=y
+
   CONTAINER ID        IMAGE               COMMAND             CREATED             STATUS              PORTS               NAMES
   c0b8f9f8f8f8        busybox        "/sh"            5 seconds ago         Exited (0) 32 minutes ago nifty_vaughan
   ```
