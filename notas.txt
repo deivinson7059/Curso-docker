@@ -1,0 +1,47 @@
+comandos
+
+--help = ayuda
+docker = cliente
+
+docker version = version del producto
+docker --version = version del deamon
+docker --help = ayuda
+
+doker ps = listar contenedores activos en el momento
+
+docker ps -a = lista todos
+
+docker ps -q = muestra los ids
+docker ps -s = muetra el tamaño
+docker ps -f= filtrar
+
+docker images = muetra las imagenes
+
+docker rm = eliminar contenedores
+docker rmi= elimina imagenes
+
+docker run = crear contenedores ==> docker run hello-word
+
+docker run --name = poner nombre al contenedor
+
+docker run -it = modo interactivo
+
+docker run -d == modo badgraund
+
+docker stop nomre/id = parar contenedor
+
+docker start nombre/id =iniciar un contenedor
+
+
+docker logs= mirar logs
+
+docker kill= forzar parado
+
+
+docker system = informacion del sistemas
+
+prune= remove data no usado depeendiendo del contesto
+inspect = informacion en formato json dependiendo del contesto
+
+docker volume= administrar volumen
+
