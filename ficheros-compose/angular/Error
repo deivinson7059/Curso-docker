@@ -1,0 +1,10 @@
+Se bloqueó la carga de un módulo de “http://localhost:8080/runtime.64bdf87423d4f50c.js” debido a un tipo MIME no permitido (“text/html”).
+localhost:8080
+Se bloqueó la carga de un módulo de “http://localhost:8080/polyfills.64bdf87423d4f50c.js” debido a un tipo MIME no permitido (“text/html”).
+localhost:8080
+El script de “http://localhost:8080/scripts.657b1a8b182b8fc9.js” fue cargado a pesar de que su tipo MIME (“text/html”) no es un tipo MIME válido de JavaScript.
+localhost:8080
+Ha fallado la carga del módulo con origen "http://localhost:8080/runtime.64bdf87423d4f50c.js". localhost:8080:89:1
+Se bloqueó la carga de un módulo de “http://localhost:8080/main.64bdf87423d4f50c.js” debido a un tipo MIME no permitido (“text/html”).
+localhost:8080
+Ha fallado la carga del módulo con origen "http://localhost:8080/polyfills.64bdf87423d4f50c.js".
