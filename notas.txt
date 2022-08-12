@@ -45,3 +45,10 @@ inspect = informacion en formato json dependiendo del contesto
 
 docker volume= administrar volumen
 
+
+
+apt-get install iputils-ping
+
+
+sudo apt-get update
+sudo apt-get install stress

@@ -1,0 +1,56 @@
+creemos una imagen
+
+docker run --name apache1 -d -it httpd
+
+docker exec -it apache1 bash
+apt-get update
+
+apt-get instal stress
+
+exit
+
+docker commit apache1 apache-stress:latest
+
+------------------------------------------
+
+
+memoria min 6m
+
+docker run --name apache5 -d -m 12m apache-stress
+
+docker stats
+
+docker run --name apache1 -d -m 256m --memory-swap 1G apache-stress
+
+docker exec -it apache5 bash
+
+
+stress -m 2 --vm-bytes 100m --vm-keep
+
+--CPU--
+
+
+docker run --name apache1 -d --cpus=0.4 apache-stress
+
+
+docker run --name apache2 -d --cpus=0.9 apache-stress
+
+docker run --name apache3 -d --cpus=1 apache-stress
+
+no es acumulativo
+
+docker exec -it apache1 bash
+
+stress -c 5 
+
+
+cpu share
+
+docker run --name apache1 -d --cpu-share=1024 --cpuset-cpus=0 apache-stress
+docker run --name apache2 -d --cpu-share=512 --cpuset-cpus=0 apache-stress
+
+docker rm -f apache1 apache2 apache3
+
+
+https://techexpert.tips/apache/php-docker-installation/
+https://hub.docker.com/layers/php/library/php/7.2-apache/images/sha256-25417b6c9c2e1a52b551ba89087f4d07c216f58784773c9e7a1710a1f6e2b4a1?context=explore

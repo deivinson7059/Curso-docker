@@ -1,0 +1,69 @@
+comando
+docker network
+
+docker network ls
+
+
+docker inspect mysql1 | grep IPAd
+
+
+docker run -d --name nginx1 -p 8090:80 nginx
+
+
+como podemos ver o saber que hay en esa red
+
+
+docker inspect mysql1 > red_mysql.txt
+
+docker stop nginx1
+docker network inspect bridge > bridge.txt
+
+docker start nginx1
+
+
+docker run -d --name mariadb_server -e MYSQL_ROOT_PASSWORD=danisoft mariadb
+docker run -d --name mariadb_client -e MYSQL_ROOT_PASSWORD=danisoft mariadb
+
+docker exec -it mysql_server bash
+
+
+--example redes---
+apt-get update
+apt-get install iputils-ping
+
+
+docker run -d -p 4000:3306 --name mariadb1 -e MARIADB_ROOT_PASSWORD=danisoft mariadb
+docker run -d -p 4001:3306 --name mariadb1 -e MARIADB_ROOT_PASSWORD=danisoft mariadb
+
+crear red
+
+docker network create red1
+
+apt install net-tools
+netstat -i (detallado)
+
+
+
+sudo apt install network-manager -y
+sudo nmcli dev status (estado redes)
+
+
+para asociar
+
+docker run -it --name ubuntua --netword red1 ubuntu
+
+docker run -it --name nginx1 --netword red1 nginx
+
+
+docker netword connect red2 ubuntua
+
+docker inspect ubuntua | grep IPAd
+docker netword desconnect red2 ubuntua
+docker inspect ubuntua | grep IPAd
+
+
+
+
+
+
+

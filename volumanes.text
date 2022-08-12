@@ -1,0 +1,67 @@
+
+/var/lib/docker
+ls -l
+
+
+docker run -it -v /datos --name ubuntu1 ubuntu bash (volumen normal)
+
+
+docker 
+
+//solo lectura
+docker run -it ubuntu8 -v vol1:/datos:ro ubuntu bash
+
+//multiples volumenes
+docker run -it --name ubuntu4 -v /datos ubuntu bash
+
+
+docker run -it --name ubuntu5 --volumes-from ubuntu4 ubuntu bash
+
+ touch f1.txt
+
+ docker run -it --name ubuntu6 --volumes-from ubuntu5 ubuntu bash
+
+ -no se puede asociar porque no tienes accesso ..
+
+
+ -- bind mount 
+
+ docker run -it -v /root/dir1:/dir1 --name ubuntu2 ubuntu bash
+
+ ---tmpfs
+
+d
+docker exec -it ubuntu3 bash
+
+mkadir datos
+cd datos 
+ touch f1.txt
+
+ exit
+ docker stop ubuntu3
+  docker start ubuntu3
+
+docker exec -it ubuntu3 bash
+cd datos 
+ls -l
+
+
+ docker run -d -i --name ubuntu16 --tmpdf /datos ubuntu 
+ docker exec -it ubuntu16 bash
+ touch borrar.txt
+ cd datos
+ mkdir dir1
+ exit
+
+ docker stop ubuntu16
+
+   docker start ubuntu16
+
+   ls -l
+   cd datos
+   ls
+
+
+
+
+

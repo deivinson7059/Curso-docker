@@ -1,0 +1,38 @@
+
+
+chmod +x parar.sh
+
+
+docker build -t imagen-restart .
+
+docker images
+
+--none-- no rebora por defecto
+docker run -d  --name t1 imagen-restart
+
+docker ps -a
+
+systemctl restart docker
+
+docker ps -a
+
+docker rm -f t1
+-- always
+
+docker run -d --name t1 --restart always imagen-restart
+
+docker inspect t1 | grep Count
+
+docker ps -a
+
+docker stop t1
+
+systemctl restart docker
+
+docker ps -a
+
+docker rm -f t1
+
+--
+
+docker run -d --name t1 --restart on-failure:5 imagen-restart

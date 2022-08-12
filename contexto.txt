@@ -1,0 +1,29 @@
+contexto
+
+copiamos shh al servidor
+ssh-keygen (generar las claves)
+
+ssh-copy-id -f -p 22 134.122.25.213
+
+password:
+--- sudo ln -s /usr/bin/ssh-askpass /usr/lib/ssh/ssh-askpass
+
+docker context ls
+
+docker context create  docker_leonardo --docker "host=ssh://root@134.122.25.213"
+
+
+docker context create  docker_leonardo --docker "host=tcp://root@134.122.25.213:22" --default-stack-orchestrator=swarm
+
+docker context ls
+
+
+docker context use docker_leonardo
+
+
+cat >> ~/.ssh/config <<-EOF
+Host 134.122.25.213
+     HostName 134.122.25.213
+     User root
+     IdentityFile ~/Downloads/Docker1KeyPair.pem 
+EOF

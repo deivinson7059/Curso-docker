@@ -1,0 +1,42 @@
+variables
+
+
+ docker run -d --name mariadb1 -e MARIADB_ROOT_PASSWORD=danisoft mariadb
+
+ docker exec -it mariadb1 bash
+
+-averificamos las variables
+ printenv
+
+
+
+
+--
+docker run -d --name mariadb2 -e MARIADB_ROOT_PASSWORD=danisoft -e MARIADB_USER=usu1 -e MARIADB_DATABASE=db1 -e MARIADB_PASSWORD=danisoft mariadb
+
+
+
+---
+
+docker run -d --name mariadb3 -e MARIADB_ROOT_PASSWORD=danisoft -e MARIADB_USER=usu1 -e MARIADB_DATABASE=db1 -e MARIADB_PASSWORD=danisoft -p 3306:3306 mariadb
+
+con un archivo de variables
+--mysql.properties
+MARIADB_ROOT_PASSWORD=danisoft
+MARIADB_DATABASE=db1
+MARIADB_USER=danisoft
+MARIADB_PASSWORD=danisoft
+
+ docker run -d --name mariadb1 --env-file mysql.properties -p 3306:3306 mariadb
+
+ --con mysql
+
+--mysql2.list
+MYSQL_ROOT_PASSWORD=danisoft
+MYSQL_DATABASE=db1
+MYSQL_USER=danisoft
+MYSQL_PASSWORD=danisoft
+
+docker run -d --name mysql1 --env-file mysql.list -p 3307:3306  mysql
+
+--&useSSL=true
